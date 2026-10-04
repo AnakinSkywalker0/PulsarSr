@@ -1,0 +1,12 @@
+{
+  "nsamples": 65536,
+  "nchans": 32,
+  "tsamp": 0.00025,
+  "fch1": 1450.0,
+  "foff": -4.0,
+  "period_s": 0.032,
+  "dm": 62.0,
+  "duty_cycle": 0.05,
+  "amplitude": 0.5,
+  "seed": 42
+}

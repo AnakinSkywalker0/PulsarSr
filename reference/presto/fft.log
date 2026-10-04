@@ -1,0 +1,22 @@
+
+   Real-Valued Data FFT Program v3.0
+        by Scott M. Ransom
+
+   1:  Processing data in 'gbt_dm62.dat'
+
+Data OK.  There are 530000 floats.
+
+   1:   Result will be in 'gbt_dm62.fft'
+
+Performing in-core forward FFT on data:
+   Reading.
+   Transforming.
+Warning:  Couldn't open '/mnt/d/PulsarSr/reference/toolchain/presto/share/presto/fftw_wisdom.txt'
+          You should run 'makewisdom'.  See INSTALL.md.
+   Writing.
+Finished.
+
+Timing summary:
+  CPU usage: 2.180 sec total (2.170 sec user, 0.010 sec system)
+  Total time elapsed:  0.080 sec (0.080 sec/file)
+

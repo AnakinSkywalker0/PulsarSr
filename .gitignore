@@ -1,0 +1,11 @@
+/target/
+# Regenerable large binary time series; retain reports, plots and reference logs.
+*.f32
+*.dat
+*.fft
+/reference/toolchain/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example

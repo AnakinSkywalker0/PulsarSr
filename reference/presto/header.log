@@ -1,0 +1,38 @@
+Assuming the data is a SIGPROC filterbank file.
+
+
+1: From the SIGPROC filterbank file '/mnt/d/PulsarSr/GBT_Lband_PSR.fil':
+                  Telescope = GBT
+                Source Name = Mystery_PSR
+            Obs Date String = 2004-01-06T11:38:09
+             MJD start time = 53010.48482638889254
+                   RA J2000 = 16:43:38.1000
+             RA J2000 (deg) = 250.90875        
+                  Dec J2000 = -12:24:58.7000
+            Dec J2000 (deg) = -12.4163055555556
+                  Tracking? = True
+              Azimuth (deg) = 0
+           Zenith Ang (deg) = 0
+            Number of polns = 2 (summed)
+           Sample time (us) = 72               
+         Central freq (MHz) = 1400             
+          Low channel (MHz) = 1352.5           
+         High channel (MHz) = 1447.5           
+        Channel width (MHz) = 1                
+         Number of channels = 96
+      Total Bandwidth (MHz) = 96               
+                       Beam = 1 of 1
+            Beam FWHM (deg) = 0.147
+         Spectra per subint = 2400
+           Spectra per file = 531000
+      Time per subint (sec) = 0.1728
+        Time per file (sec) = 38.232
+            bits per sample = 4
+          bytes per spectra = 48
+        samples per spectra = 96
+           bytes per subint = 115200
+         samples per subint = 230400
+                zero offset = 0                
+           Invert the band? = False
+       bytes in file header = 365
+

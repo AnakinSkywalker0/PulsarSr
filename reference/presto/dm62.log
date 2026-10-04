@@ -1,0 +1,43 @@
+
+
+           Pulsar Data Preparation Routine
+    Type conversion, de-dispersion, barycentering.
+                 by Scott M. Ransom
+
+Assuming the data are SIGPROC filterbank format...
+Reading SIGPROC filterbank data from 1 file:
+  '/mnt/d/PulsarSr/GBT_Lband_PSR.fil'
+
+    Number of files = 1
+       Num of polns = 2 (summed)
+  Center freq (MHz) = 1400
+    Num of channels = 96
+    Sample time (s) = 7.2e-05       
+     Spectra/subint = 2400
+   Total points (N) = 531000
+     Total time (s) = 38.232        
+     Clipping sigma = 0.000
+   Invert the band? = False
+          Byteswap? = False
+     Remove zeroDM? = False
+
+File  Start Spec   Samples     Padding        Start MJD
+----  ----------  ----------  ----------  --------------------
+1              0      531000           0  53010.48482638889254
+
+Writing output data to 'gbt_dm62.dat'.
+Writing information to 'gbt_dm62.inf'.
+
+Massaging the data ...
+
+Amount Complete = 0%Amount Complete =   1%Amount Complete =   2%Amount Complete =   3%Amount Complete =   4%Amount Complete =   5%Amount Complete =   6%Amount Complete =   7%Amount Complete =   8%Amount Complete =   9%Amount Complete =  10%Amount Complete =  11%Amount Complete =  12%Amount Complete =  13%Amount Complete =  14%Amount Complete =  15%Amount Complete =  16%Amount Complete =  17%Amount Complete =  18%Amount Complete =  19%Amount Complete =  20%Amount Complete =  21%Amount Complete =  22%Amount Complete =  23%Amount Complete =  24%Amount Complete =  25%Amount Complete =  26%Amount Complete =  27%Amount Complete =  28%Amount Complete =  29%Amount Complete =  30%Amount Complete =  31%Amount Complete =  32%Amount Complete =  33%Amount Complete =  34%Amount Complete =  35%Amount Complete =  36%Amount Complete =  37%Amount Complete =  38%Amount Complete =  39%Amount Complete =  40%Amount Complete =  41%Amount Complete =  42%Amount Complete =  43%Amount Complete =  44%Amount Complete =  45%Amount Complete =  46%Amount Complete =  47%Amount Complete =  48%Amount Complete =  49%Amount Complete =  50%Amount Complete =  51%Amount Complete =  52%Amount Complete =  53%Amount Complete =  54%Amount Complete =  55%Amount Complete =  56%Amount Complete =  57%Amount Complete =  58%Amount Complete =  59%Amount Complete =  60%Amount Complete =  61%Amount Complete =  62%Amount Complete =  63%Amount Complete =  64%Amount Complete =  65%Amount Complete =  66%Amount Complete =  67%Amount Complete =  68%Amount Complete =  69%Amount Complete =  70%Amount Complete =  71%Amount Complete =  72%Amount Complete =  73%Amount Complete =  74%Amount Complete =  75%Amount Complete =  76%Amount Complete =  77%Amount Complete =  78%Amount Complete =  79%Amount Complete =  80%Amount Complete =  81%Amount Complete =  82%Amount Complete =  83%Amount Complete =  84%Amount Complete =  85%Amount Complete =  86%Amount Complete =  87%Amount Complete =  88%Amount Complete =  89%Amount Complete =  90%Amount Complete =  91%Amount Complete =  92%Amount Complete =  93%Amount Complete =  94%Amount Complete =  95%Amount Complete =  96%Amount Complete =  97%Amount Complete =  98%Amount Complete =  99%Amount Complete = 100%
+
+Done.
+
+Simple statistics of the output data:
+             Data points written:  530000
+           Maximum value of data:  891.00
+           Minimum value of data:  688.00
+              Data average value:  785.55
+         Data standard deviation:  22.17
+

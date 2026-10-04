@@ -1,0 +1,12 @@
+[package]
+name = "search"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+realfft = "3"
+rfi.workspace = true
+serde.workspace = true
+fold.workspace = true
+dedisperse.workspace = true

@@ -1,0 +1,84 @@
+[
+  {
+    "command": [
+      "/mnt/d/PulsarSr/reference/toolchain/presto/bin/readfile",
+      "/mnt/d/PulsarSr/GBT_Lband_PSR.fil"
+    ],
+    "seconds": 0.16130324000005203,
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/mnt/d/PulsarSr/reference/toolchain/presto/bin/rfifind",
+      "-time",
+      "1",
+      "-o",
+      "gbt_rfi",
+      "/mnt/d/PulsarSr/GBT_Lband_PSR.fil"
+    ],
+    "seconds": 2.8616247939999084,
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/mnt/d/PulsarSr/reference/toolchain/presto/bin/prepdata",
+      "-nobary",
+      "-noclip",
+      "-dm",
+      "62",
+      "-numout",
+      "530000",
+      "-o",
+      "gbt_dm62",
+      "/mnt/d/PulsarSr/GBT_Lband_PSR.fil"
+    ],
+    "seconds": 0.8800550949999888,
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/mnt/d/PulsarSr/reference/toolchain/presto/bin/realfft",
+      "gbt_dm62.dat"
+    ],
+    "seconds": 0.14470603200004462,
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/mnt/d/PulsarSr/reference/toolchain/presto/bin/accelsearch",
+      "-zmax",
+      "0",
+      "-flo",
+      "15",
+      "-numharm",
+      "16",
+      "gbt_dm62.fft"
+    ],
+    "seconds": 0.9525542320000113,
+    "returncode": 0
+  },
+  {
+    "command": [
+      "/mnt/d/PulsarSr/reference/toolchain/presto/bin/prepfold",
+      "-topo",
+      "-noclip",
+      "-noxwin",
+      "-p",
+      "0.004621638",
+      "-dm",
+      "62",
+      "-n",
+      "64",
+      "-nsub",
+      "32",
+      "-npart",
+      "32",
+      "-nopdsearch",
+      "-o",
+      "gbt_fold",
+      "/mnt/d/PulsarSr/GBT_Lband_PSR.fil"
+    ],
+    "seconds": 1.9818074239999532,
+    "returncode": 0
+  }
+]

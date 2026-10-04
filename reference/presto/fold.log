@@ -1,0 +1,66 @@
+
+
+        Pulsar Raw-Data Folding Search Routine
+ Used for DM, Period, and P-dot tweaking of PSR candidates.
+                 by Scott M. Ransom
+
+Assuming the data are SIGPROC filterbank format...
+Reading SIGPROC filterbank data from 1 file:
+  '/mnt/d/PulsarSr/GBT_Lband_PSR.fil'
+
+    Number of files = 1
+       Num of polns = 2 (summed)
+  Center freq (MHz) = 1400
+    Num of channels = 96
+    Sample time (s) = 7.2e-05       
+     Spectra/subint = 2400
+   Total points (N) = 531000
+     Total time (s) = 38.232        
+     Clipping sigma = 0.000
+   Invert the band? = False
+          Byteswap? = False
+     Remove zeroDM? = False
+
+File  Start Spec   Samples     Padding        Start MJD
+----  ----------  ----------  ----------  --------------------
+1              0      531000           0  53010.48482638889254
+
+Folding a 4.62ms_Cand candidate.
+
+Output data file is 'gbt_fold_4.62ms_Cand.pfd'.
+Output plot file is 'gbt_fold_4.62ms_Cand.pfd.ps'.
+Best profile is in  'gbt_fold_4.62ms_Cand.pfd.bestprof'.
+
+Folding (topo) epoch  (MJD)  =  53010.484826388893
+Data pt duration (dt)   (s)  =  7.2e-05
+Total number of data points  =  460800
+Number of profile bins       =  64
+Folding period          (s)  =  0.004621638
+Folding frequency      (hz)  =  216.373502209
+True starting fraction       =  0
+Will search 385 DMs from 49.775 to 74.288 (ddm = 0.0637)
+
+Starting work on 'GBT_Lband_PSR.fil'...
+
+  Folded 0 points of 460800  Folded 14400 points of 460800  Folded 28800 points of 460800  Folded 43200 points of 460800  Folded 57600 points of 460800  Folded 72000 points of 460800  Folded 86400 points of 460800  Folded 100800 points of 460800  Folded 115200 points of 460800  Folded 129600 points of 460800  Folded 144000 points of 460800  Folded 158400 points of 460800  Folded 172800 points of 460800  Folded 187200 points of 460800  Folded 201600 points of 460800  Folded 216000 points of 460800  Folded 230400 points of 460800  Folded 244800 points of 460800  Folded 259200 points of 460800  Folded 273600 points of 460800  Folded 288000 points of 460800  Folded 302400 points of 460800  Folded 316800 points of 460800  Folded 331200 points of 460800  Folded 345600 points of 460800  Folded 360000 points of 460800  Folded 374400 points of 460800  Folded 388800 points of 460800  Folded 403200 points of 460800  Folded 417600 points of 460800  Folded 432000 points of 460800  Folded 446400 points of 460800  Folded 460800 points of 460800
+
+Optimizing...
+
+  Searching 385 DMs, 257 periods, and 1 p-dots...
+     (98945 total trials)
+  Amount Complete =   0%  Amount Complete =   1%  Amount Complete =   2%  Amount Complete =   3%  Amount Complete =   4%  Amount Complete =   5%  Amount Complete =   6%  Amount Complete =   7%  Amount Complete =   8%  Amount Complete =   9%  Amount Complete =  10%  Amount Complete =  11%  Amount Complete =  12%  Amount Complete =  13%  Amount Complete =  14%  Amount Complete =  15%  Amount Complete =  16%  Amount Complete =  17%  Amount Complete =  18%  Amount Complete =  19%  Amount Complete =  20%  Amount Complete =  21%  Amount Complete =  22%  Amount Complete =  23%  Amount Complete =  24%  Amount Complete =  25%  Amount Complete =  26%  Amount Complete =  27%  Amount Complete =  28%  Amount Complete =  29%  Amount Complete =  30%  Amount Complete =  31%  Amount Complete =  32%  Amount Complete =  33%  Amount Complete =  34%  Amount Complete =  35%  Amount Complete =  36%  Amount Complete =  37%  Amount Complete =  38%  Amount Complete =  39%  Amount Complete =  40%  Amount Complete =  41%  Amount Complete =  42%  Amount Complete =  43%  Amount Complete =  44%  Amount Complete =  45%  Amount Complete =  46%  Amount Complete =  47%  Amount Complete =  48%  Amount Complete =  49%  Amount Complete =  50%  Amount Complete =  51%  Amount Complete =  52%  Amount Complete =  53%  Amount Complete =  54%  Amount Complete =  55%  Amount Complete =  56%  Amount Complete =  57%  Amount Complete =  58%  Amount Complete =  59%  Amount Complete =  60%  Amount Complete =  61%  Amount Complete =  62%  Amount Complete =  63%  Amount Complete =  64%  Amount Complete =  65%  Amount Complete =  66%  Amount Complete =  67%  Amount Complete =  68%  Amount Complete =  69%  Amount Complete =  70%  Amount Complete =  71%  Amount Complete =  72%  Amount Complete =  73%  Amount Complete =  74%  Amount Complete =  75%  Amount Complete =  76%  Amount Complete =  77%  Amount Complete =  78%  Amount Complete =  79%  Amount Complete =  80%  Amount Complete =  81%  Amount Complete =  82%  Amount Complete =  83%  Amount Complete =  84%  Amount Complete =  85%  Amount Complete =  86%  Amount Complete =  87%  Amount Complete =  88%  Amount Complete =  89%  Amount Complete =  90%  Amount Complete =  91%  Amount Complete =  92%  Amount Complete =  93%  Amount Complete =  94%  Amount Complete =  95%  Amount Complete =  96%  Amount Complete =  97%  Amount Complete =  98%  Amount Complete =  99%  Amount Complete = 100%  Done searching.
+
+Maximum reduced chi-squared found  =  44.23213
+Best DM     (pc cm^-3)  =  62.3184
+Warning:  Couldn't open '/mnt/d/PulsarSr/reference/toolchain/presto/share/presto/fftw_wisdom.txt'
+          You should run 'makewisdom'.  See INSTALL.md.
+Best period        (s)  =   0.0046213765(88)
+Best p-dot       (s/s)  =  0.0(2.1)x10^-9
+Best p-dotdot  (s/s^2)  =  0.0(4.0)x10^-10
+
+Making plots.
+
+Effective number of DOF = 41.26
+Off-pulse Reduced chi^2 correction factor = 0.89
+Done.
+

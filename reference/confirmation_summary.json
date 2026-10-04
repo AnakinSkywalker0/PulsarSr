@@ -1,0 +1,206 @@
+{
+  "rules": {
+    "version": "split-confirm-v1",
+    "minimum_validation_snr": 6.0,
+    "minimum_part_snr": 1.0,
+    "minimum_time_parts": 3,
+    "minimum_subbands": 3,
+    "minimum_dm_contrast": 1.25,
+    "minimum_dispersion_widths": 1.5,
+    "maximum_zero_dm_spectral_ratio": 1.0
+  },
+  "protocol": "fixed split-confirm-v1; first half discovers/refines/selects fixed window; max-channel-delay guard gap; second half tests, 4 time parts/4 subbands; full-observation unsupervised RFI masks; false alarm unit observation; no rule changes after held-out evaluation",
+  "split": "held-out",
+  "slices": [
+    {
+      "scenario": "broadband-rfi",
+      "observations": 32,
+      "recovered": 0,
+      "recovery_wilson_95": [
+        0,
+        0.1071827150573635
+      ],
+      "observations_with_unmatched_accepted": 0,
+      "accepted_total": 0
+    },
+    {
+      "scenario": "burst-rfi",
+      "observations": 32,
+      "recovered": 0,
+      "recovery_wilson_95": [
+        0,
+        0.1071827150573635
+      ],
+      "observations_with_unmatched_accepted": 0,
+      "accepted_total": 0
+    },
+    {
+      "scenario": "colored-noise",
+      "observations": 32,
+      "recovered": 0,
+      "recovery_wilson_95": [
+        0,
+        0.1071827150573635
+      ],
+      "observations_with_unmatched_accepted": 0,
+      "accepted_total": 0
+    },
+    {
+      "scenario": "narrowband-rfi",
+      "observations": 32,
+      "recovered": 0,
+      "recovery_wilson_95": [
+        0,
+        0.1071827150573635
+      ],
+      "observations_with_unmatched_accepted": 0,
+      "accepted_total": 0
+    },
+    {
+      "scenario": "pulsar",
+      "observations": 32,
+      "recovered": 17,
+      "recovery_wilson_95": [
+        0.3644923793257382,
+        0.6913087009831766
+      ],
+      "observations_with_unmatched_accepted": 2,
+      "accepted_total": 20
+    },
+    {
+      "scenario": "pulsar-colored",
+      "observations": 32,
+      "recovered": 16,
+      "recovery_wilson_95": [
+        0.33630614316859386,
+        0.6636938568314061
+      ],
+      "observations_with_unmatched_accepted": 6,
+      "accepted_total": 22
+    },
+    {
+      "scenario": "pulsar-rfi",
+      "observations": 32,
+      "recovered": 0,
+      "recovery_wilson_95": [
+        0,
+        0.1071827150573635
+      ],
+      "observations_with_unmatched_accepted": 7,
+      "accepted_total": 10
+    },
+    {
+      "scenario": "white-noise",
+      "observations": 32,
+      "recovered": 0,
+      "recovery_wilson_95": [
+        0,
+        0.1071827150573635
+      ],
+      "observations_with_unmatched_accepted": 0,
+      "accepted_total": 0
+    }
+  ],
+  "strength_slices": [
+    {
+      "scenario": "pulsar",
+      "amplitude": 0.1,
+      "n": 8,
+      "recovered": 1
+    },
+    {
+      "scenario": "pulsar",
+      "amplitude": 0.2,
+      "n": 8,
+      "recovered": 3
+    },
+    {
+      "scenario": "pulsar",
+      "amplitude": 0.4,
+      "n": 8,
+      "recovered": 7
+    },
+    {
+      "scenario": "pulsar",
+      "amplitude": 0.8,
+      "n": 8,
+      "recovered": 6
+    },
+    {
+      "scenario": "pulsar-colored",
+      "amplitude": 0.1,
+      "n": 8,
+      "recovered": 0
+    },
+    {
+      "scenario": "pulsar-colored",
+      "amplitude": 0.2,
+      "n": 8,
+      "recovered": 4
+    },
+    {
+      "scenario": "pulsar-colored",
+      "amplitude": 0.4,
+      "n": 8,
+      "recovered": 6
+    },
+    {
+      "scenario": "pulsar-colored",
+      "amplitude": 0.8,
+      "n": 8,
+      "recovered": 6
+    },
+    {
+      "scenario": "pulsar-rfi",
+      "amplitude": 0.1,
+      "n": 8,
+      "recovered": 0
+    },
+    {
+      "scenario": "pulsar-rfi",
+      "amplitude": 0.2,
+      "n": 8,
+      "recovered": 0
+    },
+    {
+      "scenario": "pulsar-rfi",
+      "amplitude": 0.4,
+      "n": 8,
+      "recovered": 0
+    },
+    {
+      "scenario": "pulsar-rfi",
+      "amplitude": 0.8,
+      "n": 8,
+      "recovered": 0
+    }
+  ],
+  "negative_observations": 160,
+  "negative_observations_with_accepted": 0,
+  "false_observation_wilson_95": [
+    0,
+    0.023447036650032713
+  ],
+  "zero_false_exact_one_sided_95_upper": 0.018549134077503804,
+  "gbt_accepted": [
+    {
+      "period_ms": 4.621398218712699,
+      "dm": 62.389250054336884,
+      "validation_snr": 34.18094132571726,
+      "dm_contrast": 10.60192532951968,
+      "time_part_snr": [
+        19.024576935656846,
+        15.888802645629832,
+        17.386211699790753,
+        16.1262514712254
+      ],
+      "subband_snr": [
+        14.256120904136285,
+        19.02049464931172,
+        16.661513425077867,
+        19.405402612652516
+      ]
+    }
+  ],
+  "interpretation": "New random realizations on same template grid; 10 candidates, 32 bins vs GBT CLI 5/64; not general astrophysical false-alarm calibration. Positive unmatched leads can be harmonics, period/DM estimation errors or false positives. Zero negatives observed is not zero population risk. Low-DM/broad pulses may be rejected by conservative vetoes."
+}

@@ -1,0 +1,19 @@
+{
+  "fields": {
+    "data_type": 1,
+    "fch1": 1450.0,
+    "foff": -4.0,
+    "nbits": 32,
+    "nchans": 32,
+    "nifs": 1,
+    "signed": 0,
+    "source_name": "seeded synthetic pulsar",
+    "tsamp": 0.00025
+  },
+  "nchans": 32,
+  "nbits": 32,
+  "tsamp": 0.00025,
+  "fch1": 1450.0,
+  "foff": -4.0,
+  "data_offset": 191
+}

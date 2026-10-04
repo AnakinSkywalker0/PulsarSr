@@ -1,0 +1,101 @@
+
+
+    Fourier-Domain Acceleration and Jerk Search Routine
+                    by Scott M. Ransom
+
+Analyzing Mystery_PSR data from 'gbt_dm62.fft'.
+
+Memory mapping the input FFT.  This may take a while...
+Normalizing powers using median-blocks (default).
+
+Full f-fdot plane would need 0.00 GB: using in-memory accelsearch.
+
+Searching with up to 16 harmonics summed:
+  f = 15.0 to 6944.4 Hz
+  r = 572.0 to 264999.0 Fourier bins
+  z = 0.0 to 0.0 Fourier bins drifted
+
+Generating correlation kernels:
+Warning:  Couldn't open '/mnt/d/PulsarSr/reference/toolchain/presto/share/presto/fftw_wisdom.txt'
+          You should run 'makewisdom'.  See INSTALL.md.
+  Harm  1/1 :     1 kernels,    0 < z < 0    (2048 pt FFTs)
+Total RAM used by correlation kernels:  0.000 GB
+Done generating kernels.
+
+Starting the search.
+
+  Working candidates in a test format are in 'gbt_dm62_ACCEL_0.txtcand'.
+
+Amount of search complete =   0%Amount of search complete =   1%Amount of search complete =   2%Amount of search complete =   3%Amount of search complete =   4%Amount of search complete =   5%Amount of search complete =   6%Amount of search complete =   7%Amount of search complete =   8%Amount of search complete =   9%Amount of search complete =  10%Amount of search complete =  11%Amount of search complete =  12%Amount of search complete =  13%Amount of search complete =  14%Amount of search complete =  15%Amount of search complete =  16%Amount of search complete =  17%Amount of search complete =  18%Amount of search complete =  19%Amount of search complete =  20%Amount of search complete =  21%Amount of search complete =  22%Amount of search complete =  23%Amount of search complete =  24%Amount of search complete =  25%Amount of search complete =  26%Amount of search complete =  27%Amount of search complete =  28%Amount of search complete =  29%Amount of search complete =  30%Amount of search complete =  31%Amount of search complete =  32%Amount of search complete =  33%Amount of search complete =  34%Amount of search complete =  35%Amount of search complete =  36%Amount of search complete =  37%Amount of search complete =  38%Amount of search complete =  39%Amount of search complete =  40%Amount of search complete =  41%Amount of search complete =  42%Amount of search complete =  43%Amount of search complete =  44%Amount of search complete =  45%Amount of search complete =  46%Amount of search complete =  47%Amount of search complete =  48%Amount of search complete =  49%Amount of search complete =  50%Amount of search complete =  51%Amount of search complete =  52%Amount of search complete =  53%Amount of search complete =  54%Amount of search complete =  55%Amount of search complete =  56%Amount of search complete =  57%Amount of search complete =  58%Amount of search complete =  59%Amount of search complete =  60%Amount of search complete =  61%Amount of search complete =  62%Amount of search complete =  63%Amount of search complete =  64%Amount of search complete =  65%Amount of search complete =  66%Amount of search complete =  67%Amount of search complete =  68%Amount of search complete =  69%Amount of search complete =  70%Amount of search complete =  71%Amount of search complete =  72%Amount of search complete =  73%Amount of search complete =  74%Amount of search complete =  75%Amount of search complete =  76%Amount of search complete =  77%Amount of search complete =  78%Amount of search complete =  79%Amount of search complete =  80%Amount of search complete =  81%Amount of search complete =  82%Amount of search complete =  83%Amount of search complete =  84%Amount of search complete =  85%Amount of search complete =  86%Amount of search complete =  87%Amount of search complete =  88%Amount of search complete =  89%Amount of search complete =  90%Amount of search complete =  91%Amount of search complete =  92%Amount of search complete =  93%Amount of search complete =  94%Amount of search complete =  95%Amount of search complete =  96%Amount of search complete =  97%Amount of search complete =  98%Amount of search complete =  99%Amount of search complete = 100%
+
+Done searching.  Now optimizing each candidate.
+
+Removed 66 likely harmonically related candidates.
+Amount of optimization complete =   0%Amount of optimization complete =   6%Amount of optimization complete =  13%Amount of optimization complete =  20%Amount of optimization complete =  26%Amount of optimization complete =  33%Amount of optimization complete =  40%Amount of optimization complete =  46%Amount of optimization complete =  53%Amount of optimization complete =  60%Amount of optimization complete =  66%Amount of optimization complete =  73%Amount of optimization complete =  80%Amount of optimization complete =  86%Amount of optimization complete =  93%Amount of optimization complete = 100%
+width < len (7) in center_string(outstring, '1264.37', width=6)
+
+width < len (11) in center_string(outstring, ' 0.5005(91)', width=10)
+
+width < len (11) in center_string(outstring, ' 0.4945(31)', width=10)
+
+width < len (11) in center_string(outstring, ' 1.0079(48)', width=10)
+
+width < len (14) in center_string(outstring, ' 0.0(1.2)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.0)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(2.2)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.7)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.8)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.1)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.7)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(2.0)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.3)x10^1', width=12)
+
+width < len (13) in center_string(outstring, '0.0(1.2)x10^2', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(3.0)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(4.6)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(6.3)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.9)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(2.4)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.2)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.1(2.6)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.1(2.6)x10^1', width=12)
+
+width < len (14) in center_string(outstring, '-0.1(4.7)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.1)x10^1', width=12)
+
+width < len (14) in center_string(outstring, ' 0.0(1.0)x10^1', width=12)
+
+width < len (14) in center_string(outstring, '0.0(5.5)x10^-1', width=12)
+
+
+Searched the following approx numbers of independent points:
+  1 harmonic:      264427
+  2 harmonics:     132213
+  4 harmonics:      66106
+  8 harmonics:      33053
+  16 harmonics:      16526
+
+Timing summary:
+    CPU time: 3.640 sec (User: 3.620 sec, System: 0.020 sec)
+  Total time: 0.850 sec
+
+Final candidates in binary format are in 'gbt_dm62_ACCEL_0.cand'.
+Final Candidates in a text format are in 'gbt_dm62_ACCEL_0'.
+

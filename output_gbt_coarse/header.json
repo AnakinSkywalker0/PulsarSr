@@ -1,0 +1,28 @@
+{
+  "fields": {
+    "az_start": 0.0,
+    "data_type": 1,
+    "fch1": 1447.5,
+    "foff": -1.0,
+    "machine_id": 4,
+    "nbeams": 1,
+    "nbits": 4,
+    "nchans": 96,
+    "nifs": 1,
+    "nsamples": 531000,
+    "rawdatafile": "GBT_Lband_PSR.fil",
+    "source_name": "Mystery_PSR",
+    "src_dej": -122458.7,
+    "src_raj": 164338.1,
+    "telescope_id": 6,
+    "tsamp": 0.000072,
+    "tstart": 53010.48482638889,
+    "za_start": 0.0
+  },
+  "nchans": 96,
+  "nbits": 4,
+  "tsamp": 0.000072,
+  "fch1": 1447.5,
+  "foff": -1.0,
+  "data_offset": 365
+}
