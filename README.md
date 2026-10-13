@@ -131,11 +131,20 @@ PRESTO is installed locally under `reference/toolchain/presto` inside WSL Ubuntu
 - Incoherent integer-sample delays only; no subband/tree/GPU dedispersion, barycentering, acceleration search, PSRFITS or single-pulse search.
 - RFI masking is conservative and is not `rfifind`-equivalent; local median normalization and scores differ from PRESTO. Low-DM rejection is a heuristic.
 - Sifting may still merge unrelated harmonic families or keep spectral sidelobes. Split-confirm-v1 is empirically evaluated on a small control grid; it is not general false-alarm calibration and can reject broad/low-DM pulsars.
-- Historical recovery uses reused development seeds. New split-confirmation evaluation uses fresh held-out seeds and noise/RFI stress slices; severe RFI recovery fails. The template grid is narrow, and PRESTO recovery comparisons remain.
+- Historical recovery uses reused development seeds. New split-confirmation evaluation uses fresh held-out seeds and noise/RFI stress slices; severe-RFI recovery was fixed on 2026-10-13 (0/32 to 20/32, see above). Remaining misses are very weak signals and low-DM/broad-pulse pulsars vetoed by the zero-DM rules. The template grid is narrow, and PRESTO recovery comparisons remain.
 - Catalogue cross-check, exhaustive candidate-by-candidate explanations, optimized dedispersion, Criterion/flamegraph/hyperfine measurements and matched PRESTO timing are pending.
 
 See [implementation write-up](docs/write-up.md) and the Obsidian project dashboard for progress.
 
+## Next objectives
+
+1. **Catalogue check (next):** confirm the GBT pulsar's identity and period against ATNF, with epoch and barycentric caveats.
+2. **Publish:** push the repository and get remote CI (Windows and Linux) green.
+3. **Low-DM sensitivity decision:** measure what relaxing the zero-DM contrast and dispersion-width rules gains versus the false-alarm cost, on fresh held-out seeds (base 80000 or later). No rule changes without a new held-out set.
+4. **Full PRESTO comparison:** candidate-by-candidate differences and recovery under matched settings.
+5. **Performance:** subband or tree dedispersion with equivalence tests against brute force, profiling, then matched-workload PRESTO timing before any speed claim.
+6. **Stress slices:** narrower bursts, drifting RFI, fractional-sample delays and short periods.
+7. **Optional extensions:** PSRFITS, single-pulse search, acceleration or GPU.
 ## References
 
 - [PRESTO tutorial](https://www.cv.nrao.edu/~sransom/PRESTO_search_tutorial.pdf)

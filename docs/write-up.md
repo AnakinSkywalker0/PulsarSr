@@ -26,6 +26,11 @@ The revised development results reuse the same seeds and therefore are diagnosti
 
 Maximizing peak/off-pulse RMS alone favored unstable off-pulse variance in local period/DM grids. A flat-profile reduced chi-square objective now drives refinement; peak SNR remains an explicitly uncalibrated visualization/ranking measure. Spectral interference can still have high chi-square, so neither statistic alone is astrophysical proof.
 
+### Burst RFI masking floor
+
+Severe-RFI recovery was 0/32. The cause was in the mask, not the confirmation rules: the robust scale was floored at 1% of the median, about 1.0 on data near 100, larger than the true scatter of block means (about 0.0125). A broadband burst shifting a block mean by about 6 stayed under the 8-sigma threshold and was never masked. After dedispersion it produced strong 15-20 Hz candidates near DM 80 that crowded out the pulsar and caused false accepts. Lowering the floor to 0.01% raised recovery to 20/32 on fresh seeds (base 60000), matching the clean slice, with negatives still 0/160 and the GBT result unchanged. Many wrong-harmonic misses seen before the fix were a symptom of the same burst.
+
+Remaining misses were then classified: signals too weak to detect (recovery by injected amplitude 0.1/0.2/0.4/0.8 was 1/8, 5/8, 7/8, 8/8 clean), and correctly found low-DM or broad-pulse pulsars vetoed by the zero-DM contrast and dispersion-width rules. Relaxing those rules trades directly against false-alarm control, so it is left as an explicit decision for a fresh held-out set.
 ## Interpretation
 
 PRESTO folds the observation at ~4.621376 ms topocentrically, slightly different from the tutorial's quoted 4.621638 ms. Comparing values requires keeping timing conventions explicit. Rust does not barycenter, and its DM/profile refinement differs from PRESTO's subband method.
