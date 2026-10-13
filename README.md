@@ -23,7 +23,7 @@ Historical full-data measurements below remain a separately recorded baseline. T
 
 ## Build and run
 
-Requires stable Rust. Tested locally on Windows with Rust 1.97.1.
+Requires stable Rust. Tested locally on Windows with Rust 1.97.1. On Linux, plotting also needs the system Fontconfig development package (Debian/Ubuntu: `sudo apt-get install libfontconfig1-dev`).
 
 ```sh
 cargo build --release
@@ -121,7 +121,7 @@ cargo run --release -p synth --example recovery -- reference/recovery.json
 python scripts/benchmark.py
 ```
 
-GitHub Actions is configured for Windows and Linux. A repository has not yet been published, so remote CI is not claimed as run.
+GitHub Actions runs the formatting, Clippy and test checks above on Windows and Linux. The first remote run failed on Linux because the runner lacked Fontconfig; the workflow now installs it. A passing remote run is not yet claimed.
 
 PRESTO is installed locally under `reference/toolchain/presto` inside WSL Ubuntu. Reproduction scripts and commands are in [verification](docs/verification.md). Toolchains and raw binary artifacts are ignored by Git.
 
@@ -139,7 +139,7 @@ See [implementation write-up](docs/write-up.md) and the Obsidian project dashboa
 ## Next objectives
 
 1. **Catalogue check (next):** confirm the GBT pulsar's identity and period against ATNF, with epoch and barycentric caveats.
-2. **Publish:** push the repository and get remote CI (Windows and Linux) green.
+2. **CI:** push the pending commits and confirm remote CI (Windows and Linux) is green.
 3. **Low-DM sensitivity decision:** measure what relaxing the zero-DM contrast and dispersion-width rules gains versus the false-alarm cost, on fresh held-out seeds (base 80000 or later). No rule changes without a new held-out set.
 4. **Full PRESTO comparison:** candidate-by-candidate differences and recovery under matched settings.
 5. **Performance:** subband or tree dedispersion with equivalence tests against brute force, profiling, then matched-workload PRESTO timing before any speed claim.
