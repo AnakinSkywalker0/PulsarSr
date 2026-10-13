@@ -13,7 +13,9 @@ pub fn median(values: &[f32]) -> f32 {
 fn outliers(v: &[f32], threshold: f32) -> Vec<bool> {
     let center = median(v);
     let mad = median(&v.iter().map(|x| (x - center).abs()).collect::<Vec<_>>());
-    let scale = (1.4826 * mad).max(center.abs() * 0.01).max(1e-6);
+    // The relative floor only guards degenerate (e.g. constant or heavily quantized) data. A
+    // 1% floor swamped real scatter of block means on high-baseline data and hid broadband bursts.
+    let scale = (1.4826 * mad).max(center.abs() * 1e-4).max(1e-6);
     v.iter()
         .map(|x| (x - center).abs() > threshold * scale)
         .collect()
@@ -95,6 +97,21 @@ pub fn mask(data: &mut [f32], nsamples: usize, block_samples: usize, threshold: 
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn modest_broadband_burst_on_high_baseline_is_masked() {
+        // Block mean shifts by +6 on a baseline of 100 with unit noise: below 1% of baseline.
+        let (n, chans) = (4000, 16);
+        let mut data: Vec<f32> = (0..n * chans)
+            .map(|i| 100. + ((i * 2654435761usize) % 1000) as f32 / 500. - 1.)
+            .collect();
+        for c in 0..chans {
+            for t in 1600..1680 {
+                data[c * n + t] += 30.;
+            }
+        }
+        let m = mask(&mut data, n, 400, 8.);
+        assert!(m.blocks.contains(&4), "{:?}", m.blocks);
+    }
     #[test]
     fn planted_channel_and_block_are_masked() {
         let n = 1000;

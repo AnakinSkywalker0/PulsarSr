@@ -81,7 +81,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let base = match split.as_str() {
         "development" => 20000,
         "held-out" => 40000,
-        _ => return Err("split must be development or held-out".into()),
+        // Reserved after the RFI block-floor fix; untouched by any tuning.
+        "held-out-2" => 60000,
+        _ => return Err("split must be development, held-out or held-out-2".into()),
     };
     let rules = search::confirmation::Rules::default();
     let config = search::Config {

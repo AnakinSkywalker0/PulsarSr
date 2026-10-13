@@ -85,3 +85,9 @@ The synthetic evaluation uses **10** families and **32** bins; the displayed GBT
 ## Still required
 
 Realistic RFI mitigation, better rational/harmonic family recovery, robust correlated-noise errors, more independent negative observations, a new held-out set after future tuning, ATNF/epoch checks and complete PRESTO sensitivity comparisons. Acceptance currently prioritizes a narrower set of persistent dispersed pulses; it is not astrophysical proof.
+
+## Addendum: burst-RFI mask fix
+
+Root cause of the 0/32 severe-RFI recovery: `rfi::mask` floored its robust scale at 1% of the median, about 1.0 for data near 100, so a +6 block-mean burst fell under the 8-sigma threshold and was never masked. The dedispersed burst then produced low-frequency (15-20 Hz) candidates at DM ~80 that crowded out the pulsar. Floor reduced to 0.01% with a regression test.
+
+Results (strict recovery / observations with unmatched accepted leads), development seeds 20000 then fresh `held-out-2` seeds 60000: pulsar-rfi 0/32 -> 20/32 (1/32 false) on development and 20/32 (1/32 false) on held-out-2; negatives 0/160 on held-out-2; GBT unchanged. Remaining misses are harmonic/DM errors shared with the clean slice. Raw output: `reference/confirmation_held-out-2.json`.

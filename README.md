@@ -8,12 +8,16 @@ A Rust pulsar-search pipeline with SIGPROC filterbank input, verified on the PRE
 
 The search now includes **split-data candidate confirmation**: discovery selects the period/DM/pulse window; separate data checks persistence and interference controls. The GBT pulsar is accepted and the leading interference rejected. Accepted candidates remain follow-up leads, not astrophysical proof. See [confirmation results and limitations](docs/confirmation.md).
 
+### Burst-RFI fix
+
+The mask's robust scale had a floor of 1% of the median, which on high-baseline data (about 100) exceeded the true scatter of block means and let a broadband burst through. The floor is now 0.01%. On the fresh seed set 60000 (`held-out-2`, never used for tuning), severe-RFI recovery is **20/32** with 1/32 observations holding an unmatched accepted lead, versus 20/32 and 2/32 in the clean-pulsar slice. Negatives remain 0/160 and the GBT result is unchanged. The first-pass v1 numbers below are kept for the record.
+
 ### Latest confirmation results
 
 - GBT accepted: **4.621398 ms**, DM **62.389**, held-out pulse SNR **34.18**.
 - **0/160** held-out noise/RFI-only observations had accepted candidates; the one-sided 95% upper bound is **1.86% per observation** for this limited control mixture.
-- Strict injection recovery: **17/32 clean**, **16/32 colored**, **0/32 burst-RFI stress**, across varied strengths. Harmonic/DM errors and unmatched accepted leads remain in positive observations.
-- **14 tests** pass, including independent bit-depth fixtures and end-to-end confirmation controls.
+- Strict injection recovery: **17/32 clean**, **16/32 colored**, **0/32 burst-RFI stress** (v1 baseline; fixed afterwards, see below), across varied strengths. Harmonic/DM errors and unmatched accepted leads remain in positive observations.
+- **15 tests** pass, including independent bit-depth fixtures and end-to-end confirmation controls.
 
 Historical full-data measurements below remain a separately recorded baseline. The latest split-data run uses less discovery data and different confirmation processing.
 
@@ -140,3 +144,4 @@ See [implementation write-up](docs/write-up.md) and the Obsidian project dashboa
 - Original: Parth Malik, *Pulsar Search in Rust — Project Plan*, October 3, 2026.
 
 MIT license.
+
